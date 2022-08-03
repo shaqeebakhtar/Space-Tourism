@@ -144,7 +144,7 @@ select {
 }
 
 .image--large {
-  max-width: 140%;
+  max-width: 110%;
 }
 
 /* ----- only accessible to screen readers ----- */
@@ -678,6 +678,7 @@ body {
 
 .grid-container--technology {
   --flow-space: 3rem;
+  padding-inline: 0;
   grid-template-areas:
     "title"
     "image"
@@ -686,6 +687,7 @@ body {
 }
 
 .grid-container--technology > picture {
+  max-width: 100%;
   grid-area: image;
 }
 
@@ -695,6 +697,7 @@ body {
 }
 
 .grid-container--technology > .launch-details {
+  padding-inline: 1em;
   grid-area: content;
 }
 
@@ -791,11 +794,13 @@ body {
   }
 
   .grid-container--technology {
+    padding-inline-end: 0;
     place-items: center;
     justify-items: start;
-    grid-template-columns:
-      minmax(3rem, 1fr) minmax(3rem, 1fr) minmax(0, 40rem) minmax(0, 20rem)
-      minmax(3rem, 1fr);
+    grid-template-columns: minmax(3rem, 1fr) minmax(3rem, 1fr) minmax(0, 40rem) minmax(
+        0,
+        20rem
+      );
     grid-template-areas:
       ". title title title ."
       ". tabs content image ."
@@ -808,5 +813,9 @@ body {
 
   .grid-container--technology > .number-indicators {
     flex-direction: column;
+  }
+
+  .grid-container--technology picture {
+    grid-column: 4 / span 5;
   }
 }
