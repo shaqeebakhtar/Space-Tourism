@@ -319,7 +319,7 @@ select {
 
 @media (min-width: 35em) {
   #primary-navigation {
-    padding-inline: clamp(2.5rem, 4vw, 6.5rem);
+    padding-inline: clamp(2.5rem, 3vw, 6.5rem);
   }
 }
 
@@ -340,7 +340,7 @@ nav {
     position: relative;
     z-index: 10;
     height: 1px;
-    width: 25%;
+    width: 27%;
     margin-right: -2rem;
     background-color: hsl(var(--clr-light) / 0.1);
     order: 1;
